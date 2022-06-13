@@ -10,7 +10,7 @@ export class WsLambdaDeployStack extends Stack {
     super(scope, id, props);
 
     const lambdaFunction = new lambda.Function(this, "practice-lambda", {
-      runtime: lambda.Runtime.NODEJS_16_X,
+      runtime: lambda.Runtime.PYTHON_3_9,
       handler: 'practice-lambda.lambda_handler',
       code: lambda.Code.fromAsset(path.join(__dirname, '/../src')),
       environment: {
